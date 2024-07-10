@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/universal.css') }}">
+    <title>Diario de Duelo</title>
+</head>
+<body>
+
+    <main>
+        <section>
+            <div class="container">
+                
+                <div class="back-button">
+                    <a href="{{ url_for('book') }}" class="back-link">← Back to Books</a>
+                </div>
+
+                <div class="left-column">
+                    <div class="book">
+                        <img src="{{ url_for('static', filename='img/mary1.png') }}" alt="Diario de Duelo">
+                        <h2>Diario de Duelo</h2>
+                        <span class="author">by Mary Shelley</span>
+                        <span class="category">Category: Terror</span>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="information">
+                        <h1>About the Book</h1>
+                        <p>Mary Shelley, conocida por su obra "Frankenstein", es una de las escritoras más relevantes del siglo XIX. A pesar de que sus relatos, poemas y cartas son cada vez más reconocidos, sus diarios personales han permanecido en gran medida desconocidos. Estos diarios abarcan desde su escape con Percy Shelley hasta los meses posteriores a la muerte del poeta, convirtiéndose en un estremecedor diario de duelo que busca retener con palabras la vida que se ha desvanecido. Estas páginas de una fuerza expresiva insólita confirman que el Diario de Mary Shelley, apenas leído por nadie, es una de las grandes obras de la literatura inglesa.</p>
+                    </div>
+                    <div class="qualification">
+                        <h2>Customer Reviews</h2>
+                        <form id="review-form">
+                            <div class="form-group">
+                                <label for="rating">Rating</label>
+                                <input type="number" id="rating" name="rating" placeholder="Rate from 1 to 5" min="1" max="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="review">Review</label>
+                                <textarea id="review" name="review" placeholder="Write your Review" required></textarea>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                        <div class="reviews" id="reviews">
+                            <!-- Las reseñas de los usuarios se mostrarán aquí -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='javascript/review.js') }}"></script>
+</body>
+</html>

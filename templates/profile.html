@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <h1>User Profile</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <div class="back-button">
+                <a href="{{ url_for('book') }}" class="back-link">← Back to Books</a>
+            </div>
+            <div class="profile-header">
+                <img src="{{ url_for('static', filename='img/caricatura.jpg') }}" alt="User Photo" class="profile-photo">
+                <div class="user-info">
+                    <h2 id="user-name">{{ user['full_name'] }}</h2>
+                    <p>Email: <span id="user-email">{{ user['email'] }}</span></p>
+                    <p>Password: <span id="user-password">**********</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <h2>Your Reviews</h2>
+            <div id="reviews-container">
+                {% for review in reviews %}
+                <div class="review-item">
+                    <h3>{{ review['book_name'] }}</h3>
+                    <p>Rating: {{ review['rating'] }}/5</p>
+                    <p>Review: {{ review['review'] }}</p>
+                    <div class="review-actions">
+                        <button class="edit-btn" onclick="editReview({{ review['id'] }})">Edit</button>
+                        <button class="delete-btn" onclick="deleteReview({{ review['id'] }})">Delete</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='javascript/profile.js') }}"></script>
+</body>
+
+</html>

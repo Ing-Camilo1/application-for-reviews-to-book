@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/book.css') }}">
+    <title>Book</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <h1>Book</h1>
+            <div class="buscador">
+                <input type="search" id="search-input" placeholder="Search...">
+                <button class="search-button" onclick="searchBooks()">Buscar</button>
+            </div>
+            <div class="book-autors">
+                <div class="select-group">
+                    <label for="select-autors">Authors</label>
+                    <select id="select-autors" class="select-autors" onchange="searchBooks()">
+                        <option value="">Select an Author</option>
+                        <option value="Mary Shelley">Mary Shelley</option>
+                        <option value="Tom Sharpe">Tom Sharpe</option>
+                        <option value="Julio Verne">Julio Verne</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="select-generos">Genders</label>
+                    <select id="select-generos" class="select-generos" onchange="searchBooks()">
+                        <option value="">Select a Genre</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Accion">Acción</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Perfil del Usuario -->
+            <div class="profile-container">
+                <a href="{{ url_for('profile') }}">
+                    <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Profile" class="profile-icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container-book" id="container-books">
+            <div class="card-container" id="card-container">
+                <!-- Libros por defecto -->
+                <div class="card">
+                    <a href="{{ url_for('diario') }}">
+                        <h3>Diario de Duelo</h3>
+                        <img src="{{ url_for('static', filename='img/mary1.png') }}" alt="Diario de duelo">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('reunion') }}">
+                        <h3>Reunion Tumultosa</h3>
+                        <img src="{{ url_for('static', filename='img/tom1.png') }}" alt="Reunion Tumultosa">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('viaje') }}">
+                        <h3>Viaje al centro de la tierra</h3>
+                        <img src="{{ url_for('static', filename='img/julio1.png') }}" alt="Viaje al centro de la tierra">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('tribulaciones') }}">
+                        <h3>LAS TRIBULACIONES DE WILT</h3>
+                        <img src="{{ url_for('static', filename='img/tom2.png') }}" alt="LAS TRIBULACIONES DE WILT">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('frankenstein') }}">
+                        <h3>FRANKENSTEIN</h3>
+                        <img src="{{ url_for('static', filename='img/mary2.png') }}" alt="FRANKENSTEIN">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('transformacion') }}">
+                        <h3>TRANSFORMACIÓN Y OTROS CUENTOS</h3>
+                        <img src="{{ url_for('static', filename='img/mary3.png') }}" alt="TRANSFORMACIÓN Y OTROS CUENTOS">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('isla') }}">
+                        <h3>La isla misteriosa</h3>
+                        <img src="{{ url_for('static', filename='img/julio2.png') }}" alt="La isla misteriosa">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('peor') }}">
+                        <h3>LO PEOR DE CADA CASA</h3>
+                        <img src="{{ url_for('static', filename='img/tom3.png') }}" alt="LO PEOR DE CADA CASA">
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('luna') }}">
+                        <h3>De la Tierra a la Luna</h3>
+                        <img src="{{ url_for('static', filename='img/julio3.png') }}" alt="De la Tierra a la Luna">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='javascript/book.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.back-button {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book h2 {
+    font-size: 24px;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.book .author,
+.book .category {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.right-column {
+    flex: 2;
+    margin-left: 30px;
+}
+
+.information {
+    margin-bottom: 20px;
+}
+
+.information h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.information p {
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 600px;
+}
+
+.qualification {
+    margin-top: 20px;
+}
+
+.qualification h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.reviews {
+    margin-top: 20px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.review-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-item p {
+    margin: 5px 0;
+}
